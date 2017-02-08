@@ -344,12 +344,12 @@ namespace JakubBielawa.LineEndingsUnifier
 
         private string[] SupportedFileFormats
         {
-            get { return this.OptionsPage.SupportedFileFormats.Replace(" ", string.Empty).Split(new[] { ';' }); }
+            get { return this.OptionsPage.SupportedFileFormats.Replace(" ", string.Empty).Split(new[] { ';' },  StringSplitOptions.RemoveEmptyEntries); }
         }
 
         private string[] SupportedFileNames
         {
-            get { return this.OptionsPage.SupportedFileNames.Replace(" ", string.Empty).Split(new[] { ';' }); }
+            get { return this.OptionsPage.SupportedFileNames.Replace(" ", string.Empty).Split(new[] { ';' },  StringSplitOptions.RemoveEmptyEntries); }
         }
 
         private OptionsPage optionsPage;
